@@ -1,0 +1,24 @@
+{
+    "manifest_version": 2,
+    "name": "NicorepoOverlay",
+    "version": "1.0",
+    "description": "ニコ動のニコレポをオーバーレイ表示（ポップアップ表示）できる拡張機能",
+    "icons": {
+        "48": "img/icon_48.png",
+        "128": "img/icon_128.png"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://www.nicovideo.jp/*"
+            ],
+            "js": [
+                "overlay.js",
+                "src/vue.js"
+            ]
+        }
+    ],
+    "web_accessible_resources": [
+        "img/*"
+    ]
+}
