@@ -118,7 +118,6 @@ window.onload = () => {
                             // JSON解析
                             for (let i = 0; i < json.data.length; i++) {
                                 const data = json.data[i]
-                                console.log(data.topic)
                                 // 動画なのか
                                 const isVideo = data.topic === 'nicovideo.user.video.upload'
                                 // それとも生放送なのか
@@ -189,16 +188,4 @@ window.onload = () => {
         }
     })
 
-}
-
-const createNicorepoOverlayHeader = () => {
-    // タイトル
-    const nicorepoOverlayHeader = document.createElement('div')
-    nicorepoOverlayHeader.className = 'common-header-1l1lwin'
-    // 「ニコレポ」 表示
-    const nicorepoOverlayHeaderMessage = document.createElement('div')
-    nicorepoOverlayHeaderMessage.className = 'common-header-abyv5k'
-    nicorepoOverlayHeaderMessage.innerText = 'ニコレポ'
-    nicorepoOverlayHeader.append(nicorepoOverlayHeaderMessage)
-    return nicorepoOverlayHeader
 }
